@@ -221,3 +221,10 @@ body {
 .inputWrapper{
     position: relative;
 }
+.error{
+    color: red !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    top:-20px !important;
+
+}
