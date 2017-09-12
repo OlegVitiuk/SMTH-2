@@ -1,8 +1,13 @@
 (function(){
     Array.prototype.map.call(document.getElementsByClassName("formInputs"),function(field){
         field.addEventListener("click",function (e){
-                clearLabels();
-                e.target.previousSibling.style.display="block";
+            clearLabels();
+                try {
+                    e.target.previousSibling.style.display = "block";
+                }
+                catch(e){
+                    console.log("PreviousSibling gets text node against element!")
+                }
             });
         });
 
