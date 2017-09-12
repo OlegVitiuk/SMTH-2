@@ -1,4 +1,5 @@
 @import "reset.css";
+@import "fonts.css";
 
 body {
     width: 100%;
@@ -8,6 +9,7 @@ body {
     box-sizing: border-box;
     line-height: normal;
     color: #ffffff;
+    position: relative;
 }
 .title,.text{
     font-family: Arial;
@@ -34,7 +36,7 @@ body {
 }
 .step{
     font-size: 22px;
-    font-family: "Arial";
+    font-family: "ProximaNova-Regular";
     color: rgb(235, 236, 238);
     /*line-height: 2.727;*/
     display: flex;
@@ -72,6 +74,7 @@ body {
     color: rgb(215, 216, 218);
     text-transform: uppercase;
     line-height: 1.2;
+    font-family: 'ProximaNova-Light';
 }
 .info > span:nth-child(2)::before,.info > span:nth-child(2)::after{
     content: '\25AA';
@@ -84,22 +87,24 @@ body {
     margin: 0 3px 0 20px;
 }
 .footer{
-    margin: 55px 61px 30px;
+    margin: 55px 0 30px 61px ;
 }
 .disclaimer{
     font-size: 14px;
-    font-family: "Myriad Pro";
+    font-family: 'ProximaNovaT-Thin';
     color: rgb(163, 165, 165);
-    line-height: 1.2;
-    margin-bottom: 57px;
+    margin: 0 135px 57px 0;
+
 }
 .copyright{
-    font-size: 18px;
-    font-family: "Myriad Pro";
-    color: rgba(214, 215, 217, 0.529);
-    line-height: 1.2;
     display: flex;
     align-items: center;
+}
+.copyright>h3{
+    font-size: 18px;
+    font-family: 'ProximaNova-Light';
+    color: rgba(214, 215, 217, 0.529);
+    line-height: 1.2;
 }
 .footerLogo{
     margin-right: 16px;
@@ -115,11 +120,22 @@ body {
 .navigationItem, .navigationItem:visited, .navigationItem:link{
     text-decoration: none;
     font-size: 18px;
-    font-family: "Myriad Pro";
+    font-family: 'ProximaNova-Light';
     color: rgba(214, 215, 217, 0.529);
     line-height: 1.2;
     margin-right: 40px;
 }
 
-
+.registerForm {
+    border-radius: 4px;
+    background-image: -moz-linear-gradient( 99deg, rgb(0,151,222) 0%, rgb(40,183,181) 100%);
+    background-image: -webkit-linear-gradient( 99deg, rgb(0,151,222) 0%, rgb(40,183,181) 100%);
+    background-image: -ms-linear-gradient( 99deg, rgb(0,151,222) 0%, rgb(40,183,181) 100%);
+    box-shadow: 0px 20px 57px 0px rgba(5, 23, 34, 0.2);
+    position: absolute;
+    left: 1019px;
+    top: 60px;
+    width: 482px;
+    height: 811px;
+}
 
