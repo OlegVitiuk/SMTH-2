@@ -1,0 +1,9 @@
+@import "reset.css";
+
+body {
+    width: 100%;
+    height: 1187px;
+    background-image: url('../images/shutterstock.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
