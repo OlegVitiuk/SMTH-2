@@ -226,6 +226,10 @@ body {
 .content{
     width: 60%;
 }
+.generalWrapper{
+    max-width: 1569px;
+    margin: 0 auto;
+}
 
 @media screen and (max-width: 1125px){
     .wrapper{
@@ -254,11 +258,16 @@ body {
     }
     .container{
         flex-wrap: wrap;
-        width: 90%;
-        justify-content: center;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer{
+        margin: 0;
+        padding: 20px;
     }
     .disclaimer{
-        margin-right: 61px;
+        margin: 0 0 20px 0;
     }
 }
 
@@ -299,19 +308,66 @@ body {
     .title{
         font-size: 40px;
     }
-    .footer{
-        margin: 0;
-        padding: 20px;
-    }
-    .disclaimer{
-        margin: 0 0 20px 0;
-    }
     .container{
-        width:100%;
-        justify-content: space-around;
+        flex-direction: row;
     }
 }
 
 @media screen and (max-width: 538px){
-
+    .container{
+        flex-direction: column;
+    }
+    .text, .step>span{
+        font-size: 16px;
+    }
+    .registerForm{
+        width: 400px;
+    }
+    .formInputs{
+        width: 80%;
+    }
+    .price{
+        height: 130px;
+        width: 120px;
+        top: -60px;
+        left: 275px;
+    }
+    .formTitle{
+        font-size: 18px;
+        text-align: center;
+    }
+    .step{
+        width: 100%;
+    }
 }
+
+@media screen and (max-width: 447px){
+    .registerForm{
+        width: 320px;
+        height: 650px;
+    }
+    .price{
+        top: -60px;
+        left: 190px;
+    }
+    .formInputs{
+        width: 280px !important;
+    }
+    .inputWrapper > input:last-of-type{
+        margin-bottom: 30px;
+    }
+    #submitButton{
+        width: 200px;
+        height: 70px;
+    }
+    body{
+        min-width: 360px;
+    }
+    .accept{
+        margin-bottom: 10px;
+    }
+    .info > span{
+        font-size: 16px;
+    }
+}
+
