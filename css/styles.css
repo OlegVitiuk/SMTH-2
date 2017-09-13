@@ -176,7 +176,7 @@ body {
     margin: 60px 0;
 }
 
-.submitButton{
+#submitButton{
     border-radius: 4px;
     background-color: rgb(253, 152, 63);
     box-shadow: 0px 20px 57px 0px rgba(3, 48, 65, 0.2);
@@ -190,7 +190,7 @@ body {
     text-transform: uppercase;
     line-height: 1.2;
 }
-.submitButton:hover{
+#submitButton:hover{
     background-color: firebrick;
     color: #ffffff;
     transition-delay: 0.2s;

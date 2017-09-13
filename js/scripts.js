@@ -38,6 +38,25 @@
         }
     });
 
+    document.getElementById("regForm").addEventListener("submit",function (e) {
+        var xhr = new XMLHttpRequest();
+        var url = "google.com";
+
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var json = JSON.parse(xhr.responseText);
+                    alert("OK")
+                } else {
+                    alert("FAIL");
+                }
+            };
+
+        var data = toJSONString( this );
+        xhr.send(data);
+    });
+
     function clearLabels() {
         Array.prototype.map.call(document.getElementsByClassName("inputLabels"),function(field) {
             if(!field.classList.contains("error")) {
@@ -55,4 +74,21 @@
         var re = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
         return re.test(url);
     }
+
+    function toJSONString( form ) {
+        var obj = {};
+        var elements = form.querySelectorAll( "input" );
+        for( var i = 0; i < elements.length; ++i ) {
+            var element = elements[i];
+            var name = element.name;
+            var value = element.value;
+
+            if( name ) {
+                obj[ name ] = value;
+            }
+        }
+
+        return JSON.stringify( obj );
+    }
+    
 })();
