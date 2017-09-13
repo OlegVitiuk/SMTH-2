@@ -31,8 +31,8 @@ body {
 }
 .wrapper{
     display: flex;
-    flex-direction: column;
     padding: 57px 56px 30px 61px;
+    justify-content: space-between;
 }
 .step{
     font-size: 22px;
@@ -136,18 +136,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 482px;
+    height: 811px;
+    position: relative;
 }
 .price {
     position: absolute;
     left:-96px;
     top:-18px;
-}
-.formContainer{
-    position: absolute;
-    left: 1019px;
-    top: 60px;
-    width: 482px;
-    height: 811px;
 }
 
 .inputWrapper > input{
@@ -226,5 +222,96 @@ body {
     font-size: 15px !important;
     font-weight: bold !important;
     top:-20px !important;
+}
+.content{
+    width: 60%;
+}
+
+@media screen and (max-width: 1125px){
+    .wrapper{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .content{
+        width:100% !important;
+    }
+    .title,.text{
+        text-align: center;
+    }
+    .steps{
+        align-items: center;
+        margin-bottom: 61px;
+    }
+    .step{
+        width: 472.94px;
+    }
+    .navigation{
+        order:1;
+        margin-bottom: 10px;
+    }
+    .copyright{
+        order:2;
+    }
+    .container{
+        flex-wrap: wrap;
+        width: 90%;
+        justify-content: center;
+    }
+    .disclaimer{
+        margin-right: 61px;
+    }
+}
+
+@media screen and (max-width: 985px){
+    .info{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .info > span{
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 688px){
+    .price{
+        top: -110px;
+        left: 304px;
+    }
+    .navigation{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navigationItem{
+        margin-bottom: 7px;
+        margin-right: 0 !important;
+    }
+    .info{
+        padding: 20px;
+    }
+    .info>span{
+        font-size: 18px;
+    }
+    .wrapper{
+        padding: 20px;
+    }
+    .title{
+        font-size: 40px;
+    }
+    .footer{
+        margin: 0;
+        padding: 20px;
+    }
+    .disclaimer{
+        margin: 0 0 20px 0;
+    }
+    .container{
+        width:100%;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 538px){
 
 }
