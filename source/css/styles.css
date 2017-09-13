@@ -1,9 +1,9 @@
-@import "reset.css";
 @import "fonts.css";
+@import "reset.css";
 
 body {
     width: 100%;
-    background-image: url('../images/shutterstock.png');
+    background-image: url('../../build/images/shutterstock.png');
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
